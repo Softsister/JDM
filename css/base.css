@@ -1,0 +1,92 @@
+/* rest CSS */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    /* 防止内容溢出 以后所有的宽度高度的设置计算的起始位置是边框 */
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    /* 点击高亮现象[有的浏览器有，有的浏览器没有] 轻触 */
+    /* transparent 透明色 */
+    -webkit-tap-highlight-color: transparent;
+}
+
+body {
+    font-size: 14px;
+    font-family: "Microsoft YaHei", sans-serif;
+    color: #333;
+}
+
+from{
+    display: block;
+}
+ul, ol {
+    list-style: none;
+}
+
+a {
+    color: #333;
+    text-decoration: none;
+}
+
+input[type="text"],
+input[type="search"],
+input[type="email"],
+input[type="url"],
+input[type="password"],
+textarea {
+    border: none;
+    outline: none;
+    /* 文本域不缩放 */
+    resize: none;
+    /* 表单元素 重置 */
+    -webkit-appearance: none;
+}
+h1,h2,h3,h4,h5,h6{
+    font-weight: normal;
+}
+/* common CSS */
+.f_left {
+    float: left;
+}
+
+.f_right {
+    float: right;
+}
+
+.clearfix::before,
+.clearfix::after {
+    content: "";
+    display: block;
+    visibility: hidden;
+    height: 0;
+    line-height: 0;
+    clear: both;
+}
+
+.ml10 {
+    margin-left: 10px;
+}
+
+.mr10 {
+    margin-right: 10px;
+}
+
+.mt10 {
+    margin-top: 10px;
+}
+
+.mb10 {
+    margin-bottom: 10px;
+}
+
+[class^="icon_"],
+[class*=" icon_"]{
+    background-image: url("../images/sprites.png");
+    -webkit-background-image: url("../images/sprites.png");
+    background-repeat: no-repeat;
+    -webkit-background-repeat: no-repeat;
+    background-size: 200px 200px;
+    -webkit-background-size: 200px 200px;
+}
